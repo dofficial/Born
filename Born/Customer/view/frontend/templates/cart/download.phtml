@@ -1,0 +1,11 @@
+<?php
+/**
+ * @var \Born\Customer\Block\Cart\Download $block
+ */
+?>
+<?php if ($block->isEnabled()): ?>
+    <form action="<?= $block->getPostAction() ?>" method="post">
+        <?= $block->getBlockHtml('formkey') ?>
+        <button>Download Cart Items</button>
+    </form>
+<?php endif; ?>
